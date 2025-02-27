@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "deploy": "ng build --configuration production --base-href https://marcoAVincenzi.github.io/person-crud/ && ngh --dir=dist/person-crud"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
