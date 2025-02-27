@@ -1,0 +1,26 @@
+<form class="row" [formGroup]="personService.personForm" (submit)="onSubmit()" [class.submitted]="submitted">
+    <div class="col-12 mb-3">
+        <label class="form-label">Full Name</label>
+        <input class="form-control form-control-lg" placeholder="Enter your full name" formControlName="fullName">
+    </div>
+
+    <div class="col-6 mb-3">
+        <label class="form-label">Age</label>
+        <input class="form-control form-control-lg" placeholder="Enter your age" formControlName="age">
+    </div>
+
+    <div class="col-6 mb-3">
+        <label class="form-label">Salary</label>
+        <input class="form-control form-control-lg" placeholder="Per year" formControlName="salary">
+    </div>
+
+    <div class="col-12 mb-3">
+        <label class="form-label">Location</label>
+        <input class="form-control form-control-lg" placeholder="Enter your full location (Adress - City - Country)"
+            formControlName="location">
+    </div>
+
+    <div class="col-12 d-grid">
+        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+    </div>
+</form>

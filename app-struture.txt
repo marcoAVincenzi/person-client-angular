@@ -1,0 +1,23 @@
+- src
+    +- app
+        +- person
+            +- person.component.ts | .html
+                -- person-form
+                    +-person-form.component.ts | html
+        +- shared
+            --person.service.ts
+            --person.model.ts
+    +- app.module.ts
+- index.ts (cdn path for bootstrap & fa icons)
+
+install angular
+create project: ng new client
+
+https://getbootstrap.com/
+https://cdnjs.com/libraries/font-awesome
+npm i ngx-toastr
+
+ng g c person -s --skip-tests
+ng g s shared/person --skip-tests
+
+execute: ng serve

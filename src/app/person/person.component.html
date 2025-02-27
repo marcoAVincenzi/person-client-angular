@@ -1,0 +1,47 @@
+<div class="text-bg-dark text-center rouded-bottom py-4">
+  <h1 class="display-4">Person Register</h1>
+</div>
+
+<div class="p-4">
+  <div class="row">
+    <div class="col-md-6">
+      <app-person-form> </app-person-form>
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control mb3"
+        placeholder="Search by name"
+        [(ngModel)]="searchName"
+        (input)="filterPerson()"
+      />
+
+      <table class="table">
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of personService.listPerson">
+            <td (click)="populateForm(person)">
+              {{ person.fullName }}
+            </td>
+            <td>
+              {{ person.age }}
+            </td>
+            <td>
+              {{ +person.salary | currency:'USD':'symbol':'1.2-2' }}
+            </td>            
+            <td>
+              <i
+                class="far fa-trash-alt fa-lg text-secundary"
+                (click)="onDelete(person._id)"
+              ></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
